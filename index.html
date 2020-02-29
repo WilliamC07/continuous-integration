@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Continuous Integration</title>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Continuous Integration</h1>
+      <p>
+        <small><span class="blue">Eric Lam</span> and William Cao</small>
+        <br>
+        <small>Team Eric Eats Cows</small>
+      </p>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <ul>
+        <li>https://martinfowler.com/articles/continuousIntegration.html</li>
+        <li>https://github.com/hakimel/reveal.js</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+    // Source: https://github.com/hakimel/reveal.js/pull/569#issuecomment-534971312
+    const revealCDN = "https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/";
+    const revealCSS = [
+        { href: "css/reset.css" },
+        { href: "css/reveal.min.css" },
+        { href: "css/theme/night.css", id: "theme" },
+        { href: "lib/css/monokai.css", id: "highlightTheme" },
+    ];
+
+    revealCSS.forEach(function (css) {
+        css.href = revealCDN + css.href;
+        document.getElementsByTagName('head')[0].appendChild(Object.assign(document.createElement('link'), {
+            rel: "stylesheet",
+            type: "text/css",
+            ...css
+        }));
+    });
+
+    document.getElementsByTagName('head')[0].appendChild(Object.assign(document.createElement('script'), {
+        type: "text/javascript",
+        src: revealCDN + "js/reveal.min.js"
+    }));
+</script>
+<script>
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide',
+        dependencies: [
+            { src: `${revealCDN}plugin/markdown/marked.js` },
+            { src: `${revealCDN}plugin/markdown/markdown.js` },
+            { src: `${revealCDN}plugin/notes/notes.js`, async: true },
+            { src: `${revealCDN}plugin/highlight/highlight.js`, async: true }
+        ]
+    });
+</script>
+</body>
+</html>
