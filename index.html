@@ -6,16 +6,37 @@
   <title>Continuous Integration</title>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/highlight/highlight.js"></script>
+
+  <style>
+    .green {
+      color: #17ff2e;
+    }
+    .blue {
+      color: #1b91ff;
+    }
+    .red {
+      color: #ff2c2d;
+    }
+  </style>
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
+    <!-- Start slide -->
     <section>
       <h1>Continuous Integration</h1>
       <p>
-        <small><span class="blue">Eric Lam</span> and William Cao</small>
+        <small><span class="blue">Eric Lam</span> and <span class="blue">William Cao</span></small>
         <br>
-        <small>Team Eric Eats Cows</small>
+        <small>Team <span class="blue">Eric Eats Cows</span></small>
+      </p>
+    </section>
+
+    <!-- Definition slide -->
+    <section>
+      <h2>What is this?</h2>
+      <p>
+        <strong class="green">Continuous Integration (CI)</strong> is a development practice where developers <strong class="green">integrate</strong> code into a shared repository frequently, preferably several times a day. Each <strong class="green">integration</strong> can then be verified by an automated build and automated tests.
       </p>
     </section>
 
