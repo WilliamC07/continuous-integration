@@ -9,3 +9,4 @@
 ### How to use this website
 1. Clone this repo ```git clone https://github.com/WilliamC07/continuous-integration.git```
 2. Open up index.html in your browser.
+3. Use arrow keys to go between slides. Use "Esc" to view all the slides.
