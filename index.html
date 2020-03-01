@@ -1,137 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Continuous Integration</title>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/highlight/highlight.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Continuous Integration</title>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/plugin/highlight/highlight.js"></script>
 
-  <style>
-    .green {
-      color: #17ff2e;
-    }
-    .blue {
-      color: #1b91ff;
-    }
-    .red {
-      color: #ff2c2d;
-    }
-  </style>
+    <style>
+        .green {
+            color: #17ff2e;
+        }
+
+        .blue {
+            color: #1b91ff;
+        }
+
+        .red {
+            color: #ff2c2d;
+        }
+    </style>
 </head>
 <body>
 <div class="reveal">
-  <div class="slides">
-    <!-- Start slide -->
-    <section>
-      <h1>Continuous Integration</h1>
-      <p>
-        <small><span class="blue">Eric Lam</span> and <span class="blue">William Cao</span></small>
-        <br>
-        <small>Team <span class="blue">Eric Eats Cows</span></small>
-      </p>
-    </section>
+    <div class="slides">
+        <!-- Start slide -->
+        <section>
+            <h1>Continuous Integration</h1>
+            <p>
+                <small><span class="blue">Eric Lam</span> and <span class="blue">William Cao</span></small>
+                <br>
+                <small>Team <span class="blue">Eric Eats Cows</span></small>
+            </p>
+        </section>
 
-    <!-- Definition slide -->
-    <section>
-      <h3>What is this?</h3>
-      <p>
-        <strong class="green">Continuous Integration (CI)</strong> is a development practice where developers <strong class="green">integrate</strong> code into a shared repository frequently, preferably several times a day. Each <strong class="green">integration</strong> can then be verified by an automated build and automated tests.
-      </p>
-    </section>
-    <section>
-      <h3>Why?</h3>
-      <ul>
-        <li>Instant Feedback</li>
-        <li>Confidence in final product</li>
-        <li>Communication</li>
-      </ul>
-    </section>
+        <!-- Intro -->
+        <section>
+            <h2>Chaos</h2>
+            <img src="images/bad_master.png">
+        </section>
 
-    <!-- Keep your builds fast -->
-    <section>
-      <h2>Keep your builds fast</h2>
-      <ul>
-        <li><span class="blue">Build</span> - Turning source code to an executable</li>
-        <li>Commit multiple times a day</li>
-        <li><span class="blue">Fast</span> local tests and <span class="blue">slow</span> tests that run a server</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Keep your builds fast</h2>
-      <img src="images/build_fast.png">
-    </section>
-    <section>
-      <h2>Github Actions</h2>
-      <img src="images/build_fast2.png">
-    </section>
+        <section>
+            <h3>And Then There Was Light</h3>
+            <img src="images/good_master.png">
+        </section>
 
-    <!-- Everyone can see what's happening -->
-    <section>
-      <h2>Everyone can see what's happening</h2>
-    </section>
-    <section>
-      <h3>Jira</h3>
-      <img src="images/jiraExample.png">
-    </section>
-    <section>
-      <h3>Github Projects</h3>
-      <img src="images/github_projects.png">
-    </section>
-    <section>
-      <h3>Github Issues</h3>
-      <img src="images/github_issues.png">
-    </section>
+        <!-- Definition slide -->
+        <section>
+            <h3>What is this?</h3>
+            <p>
+                <strong class="green">Continuous Integration (CI)</strong> is a development practice where developers
+                <strong class="green">integrate</strong> code into a shared repository frequently, preferably several
+                times a day. Each <strong class="green">integration</strong> can then be verified by an automated build
+                and automated tests.
+            </p>
+        </section>
+        <section>
+            <h3>Why?</h3>
+            <ul>
+                <li>Instant Feedback</li>
+                <li>Confidence in final product</li>
+                <li>Communication</li>
+            </ul>
+        </section>
 
-    <!-- Test in a Clone of the Production Environment -->
-    <section>
-      <h2>Test in a Clone of the Production Environment</h2>
-    </section>
-    <section>
-      <h3>Instructions in README</h3>
-      <img src="images/testing_clone_environment.png">
-    </section>
-    <section>
-      <img height="100px" src="docker.svg">
-      <p>
-        A Docker container image is a lightweight, standalone, <strong class="green">executable package of software that includes everything needed to run an application</strong>: code, runtime, system tools, system libraries and settings.
-      </p>
-    </section>
+        <!-- Keep your builds fast -->
+        <section>
+            <h2>Keep your builds fast</h2>
+            <ul>
+                <li>Commit multiple times a day</li>
+                <li><span class="blue">Fast</span> local tests and <span class="blue">slow</span> tests that run a
+                    server
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Keep your builds fast</h2>
+            <img src="images/build_fast.png">
+        </section>
+        <section>
+            <h2>Github Actions</h2>
+            <img src="images/build_fast2.png">
+        </section>
 
-    <!-- Make it easy to get the latest deliverables -->
-    <section>
-      <h3>Make it easy to get the latest deliverables</h3>
-      <img src="images/easy_latest_deliverables.jpg">
-    </section>
-    <section>
-      <h3>Make it easy to get the latest deliverables</h3>
-      <img src="images/easy_latest_deliverables2.png">
-    </section>
+        <!-- Everyone can see what's happening -->
+        <section>
+            <h2>Everyone can see what's happening</h2>
+        </section>
+        <section>
+            <h3>Jira</h3>
+            <img src="images/jiraExample.png">
+        </section>
+        <section>
+            <h3>Github Projects</h3>
+            <img src="images/github_projects.png">
+        </section>
+        <section>
+            <h3>Github Issues</h3>
+            <img src="images/github_issues.png">
+        </section>
 
-    <!-- Continuous Deployment -->
-    <section>
-      <h2>Continuous Delivery and Continuous Deployment</h2>
-      <ul>
-        <li>Often hear CI/CD</li>
-        <li>Continuous Delivery: Way of putting development code to production</li>
-        <li>Continuous Deployment: Automatically update production code (no release days)</li>
-      </ul>
-    </section>
+        <!-- Test in a Clone of the Production Environment -->
+        <section>
+            <h2>Test in a Clone of the Production Environment</h2>
+        </section>
+        <section>
+            <h3>Instructions in README</h3>
+            <img src="images/testing_clone_environment.png">
+        </section>
+        <section>
+            <img height="100px" src="docker.svg">
+            <p>
+                A Docker container image is a lightweight, standalone, <strong class="green">executable package of
+                software that includes everything needed to run an application</strong>: code, runtime, system tools,
+                system libraries and settings.
+            </p>
+        </section>
 
-    <section>
-      <h1>Questions</h1>
-    </section>
-  </div>
+        <!-- Make it easy to get the latest deliverables -->
+        <section>
+            <h3>Make it easy to get the latest deliverables</h3>
+            <img src="images/easy_latest_deliverables.jpg">
+        </section>
+        <section>
+            <h3>Make it easy to get the latest deliverables</h3>
+            <img src="images/easy_latest_deliverables2.png">
+        </section>
+
+        <!-- Continuous Deployment -->
+        <section>
+            <h2>Continuous Deployment</h2>
+            <ul>
+                <li>Automatically update production code</li>
+                <li>Docker</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Questions</h1>
+        </section>
+    </div>
 </div>
 
 <script>
     // Source: https://github.com/hakimel/reveal.js/pull/569#issuecomment-534971312
     const revealCDN = "https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/";
     const revealCSS = [
-        { href: "css/reset.css" },
-        { href: "css/reveal.min.css" },
-        { href: "css/theme/night.css", id: "theme" },
-        { href: "lib/css/monokai.css", id: "highlightTheme" },
+        {href: "css/reset.css"},
+        {href: "css/reveal.min.css"},
+        {href: "css/theme/night.css", id: "theme"},
+        {href: "lib/css/monokai.css", id: "highlightTheme"},
     ];
 
     revealCSS.forEach(function (css) {
@@ -156,9 +174,9 @@
         center: true,
         transition: 'slide',
         dependencies: [
-            { src: `${revealCDN}plugin/markdown/marked.js` },
-            { src: `${revealCDN}plugin/markdown/markdown.js` },
-            { src: `${revealCDN}plugin/notes/notes.js`, async: true },
+            {src: `${revealCDN}plugin/markdown/marked.js`},
+            {src: `${revealCDN}plugin/markdown/markdown.js`},
+            {src: `${revealCDN}plugin/notes/notes.js`, async: true},
         ]
     });
 </script>
