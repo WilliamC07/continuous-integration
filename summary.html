@@ -55,6 +55,35 @@
 
   <div id="key-5" class="container-fluid mt-4">
     <h2 class="border-bottom">5. Keep your builds fast</h2>
+    <div class="container-lg">
+      <p>
+        Because you are committing multiple times a day and each commit requires tests to be run,
+        <strong class="text-success">you want tests to be fast</strong>. You want to
+        <strong class="text-success"> run fast tests locally </strong> (on your machine) and
+        <strong class="text-success"> slower tests on a server </strong>. A local test would be checking if
+        your sorting algorithm works while a slower test would be checking if all your database queries work.
+      </p>
+
+      <h3>Solutions?</h3>
+      <div class="ml-3">
+        <h4>Local tests:</h4>
+        <p class="ml-3">
+          For local tests, we can use <strong class="text-success">git hooks to run tests on every commit</strong> and
+          use a testing framework. <strong class="text-success"> unittest </strong> is a built in python framework, but
+          you can use external ones as well.
+        </p>
+        <h4>Server tests:</h4>
+        <div class="ml-3">
+          <p>Github allows us to run tests (called <strong class="text-success">Actions</strong>) on their machines (for free!)</p>
+          <img src="images/build_fast2.png" class="img-fluid" alt="Picture of github actions">
+          <p>
+            In this Github Action, a test was running on a server for over <strong class="text-danger">2 hours</strong>!
+            The tests that failed are highlighted in red. We can also tie this into our README.md to have a badge reading
+            if the latest tests are passing or not (right of image).
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="key-6" class="container-fluid mt-4">
