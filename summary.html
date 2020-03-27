@@ -216,6 +216,20 @@
 
   <div id="key-6" class="container-fluid mt-4">
     <h2 class="border-bottom">6. Clone the production environment and test there</h2>
+    <div class="container-fluid">
+      <p>
+        You should <strong class="text-success"> keep your build up-to-date with what is currently running on production</strong>. This not only
+        includes the code, but also system libraries, package versions, and language version. This will prevent situations
+        where a team member says, "it works on my machine.
+      </p>
+      <div class="d-flex">
+        <img src="docker.svg" class="col-4" style="background-color: black;">
+        <p class="ml-2">
+          A popular way to make sure every team member is working on the right version is by using <span class="text-success">Docker</span>.
+          Docker allows you to create a dockerfile (docker is to computer like requirements.txt is to pip3) that describes the operating system version, system packages, etc.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div id="key-7" class="container-fluid mt-4">
