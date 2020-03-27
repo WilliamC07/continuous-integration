@@ -63,7 +63,10 @@
         <strong class="text-success">maintain</strong>. Maintaining a repository is more than simply
         having and using one. Maintaining entails keeping the master branch <strong class="text-success">pristine</strong>
         and the commits <strong class="text-success">readable</strong>. Doing so will require the use of
-        <strong class="text-success">branching and merging</strong>.
+        <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" target="_blank">
+            <strong class="text-success">branching and merging</strong>
+        </a>
+        <a href="#footnote-1"><sup>[1]</sup></a>.
       </p>
 
       <h3>Version Control</h3>
@@ -71,7 +74,9 @@
         <p>
           To maintain a code repository, it is necessary to have <strong class="text-success">version control</strong>
           software. Version control software records changes to files, allowing you to recall previous versions and
-          providing a running history. Popular version control software includes Git and Visual Studio Team Services
+          providing a running history. Popular version control software includes
+          <a href="https://git-scm.com/" target="_blank">Git</a> and
+          <a href="https://visualstudio.microsoft.com/vs/features/collaborate/" target="_blank">Visual Studio Team Services</a>.
         </p>
       </div>
 
@@ -80,7 +85,8 @@
         <p>
           Once you have a version control system set up, it is necessary to have a <strong class="text-success">hosting service</strong>
           so that your source code is accessible to all developers at all times. Popular source code hosting services include
-          GitHub, GitLab, Bitbucket, and SourceForge.
+          <a href="https://github.com/" target="_blank">GitHub</a>, <a href="https://about.gitlab.com/" target="_blank">GitLab</a>,
+          <a href="https://bitbucket.org/product" target="_blank">Bitbucket</a>, and <a href="https://sourceforge.net/" target="_blank">SourceForge</a>.
         </p>
       </div>
     </div>
@@ -92,8 +98,16 @@
       <p>
         <strong class="text-success">Building</strong> is simply the process of compiling your source code to get a working
         application. Automating your build means being able to build your entire system with a <strong class="text-success">single</strong>
-        command. This can be done with scripting languages such as Bash, npm, and make.
+        command. This can be done with scripting languages such as
+        <a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a>, <a href="https://www.npmjs.com/" target="_blank">npm</a>, and
+        <a href="https://www.gnu.org/software/make/" target="_blank">make</a>.
       </p>
+      <p>Here are some tutorials on scripting:</p>
+      <ul>
+        <li><strong class="text-danger">FINISH</strong></li>
+      </ul>
+      <!-- Links to scripting tutorials from TEDxSoftDev VII? -->
+      <!-- https://moodyrahman.github.io/shell-script-tutorial/ -->
     </div>
   </div>
 
@@ -109,8 +123,9 @@
       <h3>When to run tests</h3>
       <div class="container-fluid">
         <p>
-          Tests must be run after every build to ensure your builds are functional. Additional tests can and should be run
-          sometime before building, such as before pushing to the repository. This is to find errors in formatting and/or sytax.
+          Tests must be run <strong class="text-success">after every build</strong> to ensure your builds are functional.
+          Additional tests can and should be run sometime before building, such as before pushing to the repository.
+          This is to find errors in formatting and/or syntax that might hold up the building process.
         </p>
       </div>
 
@@ -119,7 +134,21 @@
         <p>
           Tests can be run either <strong class="text-success">client-side</strong> or <strong class="text-success">server-side</strong>.
           Client-side testing means running tests locally and can be used for personalized tests. Server-side testing refers to running
-          tests on a shared machine. This can be used to enforce formatting and ensure code performs as it should on all types of machines.
+          tests on a shared machine. This can be used to enforce formatting and ensure code performs as it should on a standard machine.
+        </p>
+      </div>
+
+      <h3 id="backlink-2">How to test</h3>
+      <div class="container-fluid">
+        <p>
+          Local tests can be accomplished through <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" target="_blank">
+          <strong class="text-success">Git hooks</strong></a><a href="#footnote-2"><sup>[2]</sup></a>, which are scripts
+          that are automatically run when a git action is performed. Hooks can be run before/after/during many common actions, such as
+          committing, pushing, and merging. A <a href="#hooks">tutorial</a> is included near the end of this page.
+        </p>
+        <p>
+          Server-side tests can be accomplished through <strong class="text-success">GitHub Actions</strong>, which will be
+          discussed in <a href="#key-5">Key 5</a>.
         </p>
       </div>
     </div>
@@ -133,6 +162,9 @@
         forces developers to communicate frequently, ensuring developers are always aware of changes and the current state of the project.
         Additionally, by committing frequently, conflicts between developers can be found and therefore resolved quickly.
       </p>
+      <p>
+        Some popular communication tools are <!-- Slack? IDK --> <strong class="text-danger">FINISH</strong>
+      </p>
     </div>
   </div>
 
@@ -141,8 +173,10 @@
     <div class="container-fluid">
       <p>
         By building every commit to the baseline and automatically testing them, you get frequently tested builds.
-        This ensures that your baseline stays healthy with minimal issues. Your client will always have a working version of
-        your project, improving relations.
+        This ensures that your baseline stays healthy with minimal issues.
+      </p>
+      <p>
+        Additionally, your client will always have a working version of your project, leading to greater customer satisfaction.
       </p>
     </div>
   </div>
@@ -196,12 +230,25 @@
     <h2 class="border-bottom">9. Automate build deployment</h2>
   </div>
 
+  <div id="hooks" class="container-fluid mt-4">
+    <h2 class="border-bottom">Git Hooks Tutorial</h2>
+
+  </div>
+
+  <div id="actions" class="container-fluid mt-4">
+    <h2 class="border-bottom">GitHub Actions Tutorial</h2>
+  </div>
+
   <div class="container-fluid mt-4">
-    <h2 class="border-bottom">Sources and More Reading:</h2>
-    <ul>
-      <li>https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging</li>
-      <li>https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks</li>
-    </ul>
+    <h2 class="border-bottom">Sources and More Reading</h2>
+    <div class="container-fluid" id="footnote-1">
+      <a href="#key-0"><sup>[1]</sup></a>
+      https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+    </div>
+    <div class="container-fluid" id="footnote-2">
+      <a href="#backlink-2"><sup>[2]</sup></a>
+      https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+    </div>
   </div>
 
 </div>
