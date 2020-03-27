@@ -243,7 +243,29 @@
 
   <div id="hooks" class="container-fluid mt-4">
     <h2 class="border-bottom">Git Hooks Tutorial</h2>
-
+    <div class="container-fluid mt-4">
+      <p>
+        <strong>Note</strong>: This tutorial assumes you're using a bash shell. However, this is only relevant for the commands.
+        The general process will still be the same.
+      </p>
+      <ul>
+        <li> To start using Git hooks, navigate to the hooks folder located in the .git directory included with every Git repository.
+        Within this folder, you should see some .sample files:
+        <img src="images/hooks.png" style="width: 100%">
+        </li>
+        <li>
+          These hooks are currently deactivated; to activate them simply remove .sample from their name. This can be done with the
+          mv command: <code>mv &ltfilename.sample&gt &ltfilename&gt</code>.
+          <ul>
+            <li>The hooks are named after when they are run. You only need to activate the ones you want.</li>
+          </ul>
+        </li>
+        <li>
+          The hooks need to be executable or else they can't be run. To do this, run: <code>chmod +x &ltfile&gt</code>
+        </li>
+      </ul>
+      Now you're good to go! Just edit the files to add your script and Git will handle the rest.
+    </div>
   </div>
 
   <div id="actions" class="container-fluid mt-4">
@@ -251,7 +273,7 @@
   </div>
 
   <div class="container-fluid mt-4">
-    <h2 class="border-bottom">Sources and More Reading</h2>
+    <h2 class="border-bottom">Sources and Further Reading</h2>
     <div class="container-fluid" id="footnote-1">
       <a href="#key-0"><sup><i>0.1</i></sup></a>
       https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
