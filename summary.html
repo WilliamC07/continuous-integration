@@ -238,7 +238,7 @@
       </p>
     </div>
     <div>
-      <h4 id="backlink-7" class="ml-3">Use Github Releases <a href="#footnote-7"><sup><i>7.1</i></sup></a></h4>
+      <h4 id="#backlink-7" class="ml-3">Use Github Releases <a href="#footnote-7"><sup><i>7.1</i></sup></a></h4>
       <img class="col-10" src="images/easy_latest_deliverables2.png">
       <p>Github allows you to choose a <span class="text-success">git hash as the latest release</span>. You can also download a <span class="text-success">zip or tar.gz</span> of
       the git repo at the given git hash.</p>
@@ -247,10 +247,36 @@
 
   <div id="key-8" class="container-fluid mt-4">
     <h2 class="border-bottom">8. Keep the team updated on the codebase status</h2>
+    <p>
+      The team should be <span class="text-success">familiar with the codebase status</span>: if a code review needs to be done, tests are failing on master, or if any bugs are found.
+    </p>
+    <div class="container-fluid">
+      <h4>Github Projects</h4>
+      <img class="col-10" src="images/github_projects.png">
+      <p class="ml-3">Creating tables like this is a common way developers can quickly communicate what they are working on and how much more work needs to be done.</p>
+    </div>
+    <div class="container-fluid">
+      <h4>Jira</h4>
+      <img class="col-10" src="images/jiraExample.png">
+      <p class="ml-3">
+        Jira is the industry standard for working in a large groups and codebase. It contains more features (user's permission, roles, etc), but is more
+        complicated to setup and use. Github Projects should be more than enough for what we are doing in class.
+      </p>
+    </div>
   </div>
 
   <div id="key-9" class="container-fluid mt-4">
     <h2 class="border-bottom">9. Automate build deployment</h2>
+    <p>
+      You will often see <span class="text-success">CI/CD, which stands for Continuous Integration and Continuous Delivery/Deployment</span>.
+      <br/>
+      - Continuous Delivery is <span class="text-success">putting development code into production</span> (think of uploading your code to a web server).
+      <br/>
+      - Continuous Deployment is the <span class="text-success"> process of automatically updating the production code</span> (there won't be any release days; push to production when ready)
+      <br/>
+      <br/>
+      CD is beyond the scope of this Ted Talk, but there are some resources at the end of this page (<a href="#9.1">overview</a>, <a href="#9.2">usage with GitHub</a>)
+    </p>
   </div>
 
   <div id="hooks" class="container-fluid mt-4">
@@ -268,13 +294,23 @@
       <a href="#key-0"><sup><i>0.1</i></sup></a>
       https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
     </div>
+
     <div class="container-fluid" id="footnote-2">
       <a href="#backlink-2"><sup><i>2.1</i></sup></a>
       https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
     </div>
+
     <div class="container-fluid" id="footnote-7">
       <a href="#backlink-7"><sup><i>7.1</i></sup></a>
       https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository
+    </div>
+
+    <div class="container-fluid" id="footnote-9">
+      <a href="#key-9" id="9.1"><sup><i>9.1</i></sup></a>
+      https://www.atlassian.com/continuous-delivery/continuous-deployment
+      <br/>
+      <a href="#key-9" id="9.2"><sup><i>9.2</i></sup></a>
+      https://medium.com/@sairamkrish/git-branching-strategy-for-true-continuous-delivery-eade4435b57e
     </div>
   </div>
 
