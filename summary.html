@@ -182,9 +182,9 @@
     <h2 class="border-bottom">5. Keep your builds fast</h2>
     <div class="container-fluid">
       <p>
-        Because you are committing multiple times a day and each commit requires tests to be run,
-        <strong class="text-success">you want tests to be fast</strong>. You want to
-        <strong class="text-success"> run fast tests locally </strong> (on your machine) and
+        Because you are committing multiple times a day, and each commit requires testing to be run,
+        <strong class="text-success">you want tests to be fast</strong>.
+        <strong class="text-success">Run fast tests locally </strong> (on your machine) and
         <strong class="text-success"> slower tests on a server </strong>. A local test would be checking if
         your sorting algorithm works while a slower test would be checking if all your database queries work.
       </p>
@@ -193,7 +193,7 @@
       <div class="ml-3">
         <h4>Local tests:</h4>
         <p class="ml-3">
-          For local tests, we can use <strong class="text-success">git hooks to run tests on every commit</strong> and
+          For local tests, we can use <strong class="text-success">git hooks to run tests on every commit</strong>, and
           use a testing framework. <strong class="text-success"> unittest </strong> is a built in python framework, but
           you can use external ones as well.
         </p>
@@ -204,7 +204,7 @@
           <p>
             In this Github Action, a test was running on a server for over <strong class="text-danger">2 hours</strong>!
             The tests that failed are highlighted in red. We can also tie this into our README.md to have a badge reading
-            if the latest tests are passing or not (right of image).
+            if the latest tests are passing or not.
           </p>
         </div>
       </div>
@@ -216,14 +216,15 @@
     <div class="container-fluid">
       <p>
         You should <strong class="text-success"> keep your build up-to-date with what is currently running on production</strong>. This not only
-        includes the code, but also system libraries, package versions, and language version. This will prevent situations
-        where a team member says, "it works on my machine.
+        includes code, but also system libraries, package versions, and language version. This will prevent situations
+        where a team member says, "it works on my machine."
       </p>
       <div class="d-flex">
         <img src="images/docker.svg" class="col-4" style="background-color: black;">
         <p class="ml-2">
-          A popular way to make sure every team member is working on the right version is by using <span class="text-success">Docker</span>.
-          Docker allows you to create a dockerfile (docker is to computer like requirements.txt is to pip3) that describes the operating system version, system packages, etc.
+          A popular way to make sure every team member is working on the production version is by using <span class="text-success">Docker</span>.
+          Docker allows you to create a dockerfile (dockerfile is to computer like requirements.txt is to pip3 packages) that describes the operating system version, system packages, etc.
+          Docker goes beyond the scope of this presentation, but here are some <a href="#footnote-6">resources (6.1)</a>.
         </p>
       </div>
     </div>
@@ -251,16 +252,16 @@
       The team should be <span class="text-success">familiar with the codebase status</span>: if a code review needs to be done, tests are failing on master, or if any bugs are found.
     </p>
     <div class="container-fluid">
-      <h4>Github Projects</h4>
+      <h4>Github Projects (free)</h4>
       <img class="col-10" src="images/github_projects.png">
       <p class="ml-3">Creating tables like this is a common way developers can quickly communicate what they are working on and how much more work needs to be done.</p>
     </div>
     <div class="container-fluid">
-      <h4>Jira</h4>
+      <h4>Jira (has free version)</h4>
       <img class="col-10" src="images/jiraExample.png">
       <p class="ml-3">
         Jira is the industry standard for working in a large groups and codebase. It contains more features (user's permission, roles, etc), but is more
-        complicated to setup and use. Github Projects should be more than enough for what we are doing in class.
+        complicated to setup and use. Github Projects should be enough for what we are doing in class.
       </p>
     </div>
   </div>
@@ -316,13 +317,13 @@
       <li>Scroll down, click "Start commit" and click "Commit new file"</li>
       <li>Go to root directory of project</li>
       <li>After a minute, there should be a green arrow on your screen to show the action passed.<br/><img class="col-10" src="images/pass-action.png"></li>
-      <li>This action only prints out "Hello, World!" but you can do more complicated tests, like making sure code compiles. More resources can be found
-      by looking at our resources <a href="#footnote-action"><i>this(10.2)</i></a></li>.
+      <li>This action only prints out "Hello, World!", but you can do more complicated tests, like making sure code compiles. More resources can be found
+      by looking at our resources <a href="#footnote-action"><i>below(10.2)</i></a></li>.
     </ol>
   </div>
 
-  <div class="container-fluid mt-4">
-    <h2 class="border-bottom">Sources and Further Reading</h2>
+  <div class="container-fluid mt-4 mb-4">
+    <h2 class="border-bottom">Sources and More Reading</h2>
     <div class="container-fluid" id="footnote-1">
       <a href="#key-0"><sup><i>0.1</i></sup></a>
       https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
@@ -331,6 +332,11 @@
     <div class="container-fluid" id="footnote-2">
       <a href="#backlink-2"><sup><i>2.1</i></sup></a>
       https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+    </div>
+
+    <div class="container-fluid" id="footnote-6">
+      <a href="#key-6"><sup><i>6.1</i></sup></a>
+      https://www.docker.com/get-started#nav-for-developers-tab
     </div>
 
     <div class="container-fluid" id="footnote-7">
