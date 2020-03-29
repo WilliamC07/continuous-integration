@@ -201,7 +201,7 @@
         <div class="ml-3">
           <p>Github allows us to run tests (called <strong class="text-success">Actions</strong>) on their machines (for free!)</p>
           <img src="images/build_fast2.png" class="img-fluid" alt="Picture of github actions">
-          <p>
+          <p class="text-center mt-2">
             In this Github Action, a test was running on a server for over <strong class="text-danger">2 hours</strong>!
             The tests that failed are highlighted in red. We can also tie this into our README.md to have a badge reading
             if the latest tests are passing or not.
@@ -219,20 +219,20 @@
         includes code, but also system libraries, package versions, and language version. This will prevent situations
         where a team member says, "it works on my machine."
       </p>
-      <div class="d-flex">
+      <div class="text-center">
         <img src="images/docker.svg" class="col-4" style="background-color: black;">
-        <p class="ml-2">
-          A popular way to make sure every team member is working on the production version is by using <span class="text-success">Docker</span>.
-          Docker allows you to create a dockerfile (dockerfile is to computer like requirements.txt is to pip3 packages) that describes the operating system version, system packages, etc.
-          Docker goes beyond the scope of this presentation, but here are some <a href="#footnote-6">resources (6.1)</a>.
-        </p>
       </div>
+      <p class="mt-2">
+        A popular way to make sure every team member is working on the production version is by using <span class="text-success">Docker</span>.
+        Docker allows you to create a dockerfile (dockerfile is to computer like requirements.txt is to pip3 packages) that describes the operating system version, system packages, etc.
+        Docker goes beyond the scope of this presentation, but here are some <a href="#footnote-6">resources (6.1)</a>.
+      </p>
     </div>
   </div>
 
   <div id="key-7" class="container-fluid mt-4">
     <h2 class="border-bottom">7. Make it easy to get the latest deliverables</h2>
-    <div class="d-flex align-items-center">
+    <div class="text-center">
       <img class="col-4" src="images/easy_latest_deliverables.jpg">
       <p>
         Everyone (even people outside of the dev team) should be able to see the <span class="text-success">latest working product</span>.
@@ -240,9 +240,11 @@
     </div>
     <div>
       <h4 id="#backlink-7" class="ml-3">Use Github Releases <a href="#footnote-7"><sup><i>7.1</i></sup></a></h4>
-      <img class="col-10" src="images/easy_latest_deliverables2.png">
-      <p>Github allows you to choose a <span class="text-success">git hash as the latest release</span>. You can also download a <span class="text-success">zip or tar.gz</span> of
-      the git repo at the given git hash.</p>
+      <div class="text-center">
+        <img class="col-10" src="images/easy_latest_deliverables2.png">
+        <p class="mt-2">Github allows you to choose a <span class="text-success">git hash as the latest release</span>. You can also download a <span class="text-success">zip or tar.gz</span> of
+          the git repo at the given git hash.</p>
+      </div>
     </div>
   </div>
 
@@ -251,13 +253,13 @@
     <p>
       The team should be <span class="text-success">familiar with the codebase status</span>: if a code review needs to be done, tests are failing on master, or if any bugs are found.
     </p>
-    <div class="container-fluid">
-      <h4>Github Projects (free)</h4>
+    <h4>Github Projects (free)</h4>
+    <div class="container-fluid text-center">
       <img class="col-10" src="images/github_projects.png">
       <p class="ml-3">Creating tables like this is a common way developers can quickly communicate what they are working on and how much more work needs to be done.</p>
     </div>
-    <div class="container-fluid">
-      <h4>Jira (has free version)</h4>
+    <h4>Jira (has free version)</h4>
+    <div class="container-fluid text-center">
       <img class="col-10" src="images/jiraExample.png">
       <p class="ml-3">
         Jira is the industry standard for working in a large groups and codebase. It contains more features (user's permission, roles, etc), but is more
