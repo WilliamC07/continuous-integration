@@ -1,5 +1,11 @@
 # continuous-integration
 
+### The team:
+Team Cowardly Pirick - William Cao & Eric Lam <br/>
+SoftDev pd1 <br/>
+P03: TEDxSoftDev VII <br/>
+2019-03-30 <br/>
+
 ### To start development for presentation
 1. Download a release (3.9.2) from [this](https://github.com/hakimel/reveal.js/releases)
 1. Unzip and open up "demo.html" in your browser. Look at this for examples.
